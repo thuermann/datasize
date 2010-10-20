@@ -1,23 +1,22 @@
 /*
- * $Id: datasize.c,v 1.1 2000/08/03 12:11:58 urs Exp $
+ * $Id: datasize.c,v 1.2 2010/10/20 11:08:53 urs Exp $
  */
 
 #include <stdio.h>
 
+#define FMTSIZE(type) "%-12s %2lu\n", #type, sizeof(type)
+
 int main(void)
 {
-	printf("sizeof(char)        = %2lu\n"
-	       "sizeof(short)       = %2lu\n"
-	       "sizeof(int)         = %2lu\n"
-	       "sizeof(long)        = %2lu\n"
-	       "sizeof(long long)   = %2lu\n"
-	       "sizeof(void *)      = %2lu\n"
-	       "sizeof(float)       = %2lu\n"
-	       "sizeof(double)      = %2lu\n"
-	       "sizeof(long double) = %2lu\n",
-	       sizeof(char), sizeof(short), sizeof(int),
-	       sizeof(long), sizeof(long long), sizeof(void*),
-	       sizeof(float), sizeof(double), sizeof(long double));
+	printf(FMTSIZE(char));
+	printf(FMTSIZE(short));
+	printf(FMTSIZE(int));
+	printf(FMTSIZE(long));
+	printf(FMTSIZE(long long));
+	printf(FMTSIZE(void *));
+	printf(FMTSIZE(float));
+	printf(FMTSIZE(double));
+	printf(FMTSIZE(long double));
 
 	return 0;
 }
