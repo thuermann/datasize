@@ -1,10 +1,10 @@
 /*
- * $Id: datasize.c,v 1.2 2010/10/20 11:08:53 urs Exp $
+ * $Id: datasize.c,v 1.3 2010/10/20 11:09:03 urs Exp $
  */
 
 #include <stdio.h>
 
-#define FMTSIZE(type) "%-12s %2lu\n", #type, sizeof(type)
+#define FMTSIZE(type) "%-12s %2zu\n", #type, sizeof(type)
 
 int main(void)
 {
