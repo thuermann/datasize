@@ -1,5 +1,5 @@
 /*
- * $Id: datasize.c,v 1.5 2011/10/28 06:56:47 urs Exp $
+ * $Id: datasize.c,v 1.6 2013/07/11 23:50:04 urs Exp $
  */
 
 #include <stdio.h>
@@ -23,10 +23,11 @@ int main(void)
 	putchar('\n');
 
 	printf(FMTSIZE(time_t));
-	printf(FMTSIZE(size_t));
-	printf(FMTSIZE(off_t));
-	printf(FMTSIZE(void *));
 	printf(FMTSIZE(clock_t));
+	printf(FMTSIZE(suseconds_t));
+	printf(FMTSIZE(size_t));
+	printf(FMTSIZE(void *));
+	printf(FMTSIZE(off_t));
 	putchar('\n');
 
 	printf(FMTSIZE(tv.tv_sec));
